@@ -19,8 +19,8 @@
         src="https://cdn.rawgit.com/prampcontent/180077452f9279073cab1035f60d30cf/raw/9cbf891a80bad9ad09c6261ef9578a65502922cc/search_helper.js">
     </script>
     <script>
-        const searchInputElement = document.querySelector('.search-input');
-        const resultsElement = document.querySelector('.results');
+        const searchEl = document.querySelector('.search-input');
+        const resultEl = document.querySelector('.results');
 
         // Convert search results into UI suggestions
         function getData(query) {
@@ -32,7 +32,7 @@
                     </li>
                 `);
                 console.log(data.join(''));
-                resultsElement.innerHTML = data.join('');
+                resultEl.innerHTML = data.join('');
             })
         }
 
@@ -42,8 +42,8 @@
         }
 
         // Register for both events
-        searchInputElement.addEventListener('change', changeHandler);
-        searchInputElement.addEventListener('keyup', changeHandler);
+        searchEl.addEventListener('change', changeHandler);
+        searchEl.addEventListener('keyup', changeHandler);
     </script>
 </body>
 
